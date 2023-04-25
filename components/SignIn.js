@@ -8,22 +8,20 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export const CadastroScreen = ({ navigation }) => {
+export const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/picboard.png")} style={styles.image} />
-      <Text style={styles.Titulo}>CADASTRO</Text>
-      <TextInput style={styles.input} placeholder="Nome completo" />
+      <Text style={styles.Titulo}>LOGIN</Text>
       <TextInput style={styles.input} placeholder="Email" />
       <TextInput style={styles.input} placeholder="Senha" />
-      <TextInput style={styles.input} placeholder="Confirme a senha" />
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Cadastrar-se</Text>
+        <Text style={styles.buttonText}>Fazer Login</Text>
       </TouchableOpacity>
       <View style={styles.loginContainer}>
-        <Text style={styles.loginText}>Já possui uma conta? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>
-          <Text style={styles.loginLink}>Fazer login</Text>
+        <Text style={styles.loginText}>Ainda não é inscrito? </Text>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+          <Text style={styles.CadastroLink}>Cadastre-se</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -69,14 +67,13 @@ const styles = StyleSheet.create({
   loginText: {
     color: "gray",
   },
-  loginLink: {
+  CadastroLink: {
     textDecorationLine: "underline",
     color: "blue",
   },
   Titulo: {
     fontWeight: "bold",
     fontSize: 28,
-
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
     textShadowColor: "#00000029",
@@ -84,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CadastroScreen;
+export default LoginScreen;

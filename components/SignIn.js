@@ -15,7 +15,7 @@ export const LoginScreen = ({ navigation }) => {
       <Text style={styles.Titulo}>LOGIN</Text>
       <TextInput style={styles.input} placeholder="Email" />
       <TextInput style={styles.input} placeholder="Senha" />
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("TakePicture")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
         <Text style={styles.buttonText}>Fazer Login</Text>
       </TouchableOpacity>
       <View style={styles.loginContainer}>
